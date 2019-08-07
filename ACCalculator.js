@@ -129,15 +129,15 @@ class Customer {
                 this.convertDollar(totalCostSavings) +
                 '<p>Total energy savings is ' +
                 totalEnergySavings.toFixed(0) +
-                ' kWh</p><p>Total CO2 reduction is ' +
+                ' kWh</p><p>Total greenhouse gas reduction is ' +
                 totalCO2Reduction.toFixed(2) +
-                ' tons</p><h4>10 Year Projections:</h4><p>Total cost savings is $' +
+                ' tons of CO2</p><h4>10 Year Projections:</h4><p>Total financial savings is $' +
                 this.convertDollar(totalCostSavings * this._tenYearCumulative) +
-                '</p><p>Total energy reduction is ' +
+                '</p><p>Total energy savings is ' +
                 (totalEnergySavings * 10).toFixed(0) +
                 ' KwH</p><p>Total greenhouse gas reduction is ' +
                 (totalCO2Reduction * 10).toFixed(2) +
-                ' tons</p>';
+                ' tons of CO2</p>';
             $("#results").html(resultsString);
             $('#results').append('<div id="email">' +
                 '<p>Would you like to email the results?</p>' +
