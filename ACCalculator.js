@@ -26,15 +26,11 @@ startingHTML = '<div class="container">\n' +
     '            <div class="col-sm-3 m-4" id="addSection">\n' +
     '                <button id="add">add system</button>\n' +
     '            </div>\n' +
-    '    </div>\n' +
-    '<p></p>' +
-    '<div class="row">\n' +
-    ' <div class="col-sm-2">   ' +
+    '<div class="col-sm-4 m-3" >' +
     '<button id="calculate">Calculate</button>\n' +
+    '<p></p><p id="results"></p> ' +
     '</div>' +
-    '<div class="col-sm-8" id="results">' +
-    '</div>' +
-    '    </div>' +
+    '    </div>\n' +
     '</div>';
 $("#coolgreenpowercalculator").append(startingHTML);
 // represents the environmental variables that hold across the systems
