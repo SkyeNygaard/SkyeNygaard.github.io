@@ -26,9 +26,13 @@ startingHTML = '<div class="container">\n' +
     '            <div class="col-sm-3 m-4" id="addSection">\n' +
     '                <button id="add">add system</button>\n' +
     '            </div>\n' +
-    '<div class="col-sm-4 m-3" >' +
+    '</div>' +
+    '<div class="row">' +
+    '<div class="col-sm-2 m-3">' +
     '<button id="calculate">Calculate</button>\n' +
-    '<p></p><p id="results"></p> ' +
+    '</div>' +
+    '<div class="col-sm-4 m-3" >' +
+    '<p id="results"></p> ' +
     '</div>' +
     '    </div>\n' +
     '</div>';
