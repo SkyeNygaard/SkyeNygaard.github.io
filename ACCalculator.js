@@ -14,11 +14,11 @@ let startingHTML;
 startingHTML = '<div class="container">\n' +
     '<p>Select a city from the map or insert your own data. Then add systems to estimate your cost savings with COOLNOMIX on your air conditioning system!</p>' +
     '    <div class="row">\n' +
-    '        <div class="col-sm-5" id="map">\n' +
+    '        <div class="col-sm-7" id="map">\n' +
     '            <div id="chartdiv" style="height: 50vh;"></div>\n' +
     '<h4 id="location"></h4>' +
     '        </div>\n' +
-    '        <div class="col-sm-5 card m-3" id="sliders">\n' +
+    '        <div class="col-sm-4 card m-3" id="sliders">\n' +
     '        </div>\n' +
     '    </div>\n' +
     ' <p></p>' +
