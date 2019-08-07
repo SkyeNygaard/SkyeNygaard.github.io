@@ -12,9 +12,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let startingHTML;
 startingHTML = '<div class="container">\n' +
+    '<p>Select a city from the map or insert your own data. Then add systems to estimate your cost savings with COOLNOMIX on your air conditioning system!</p>' +
     '    <div class="row">\n' +
     '        <div class="col-sm-5" id="map">\n' +
-    '            <div id="chartdiv" style="height: 50vh; width: 80vw"></div>\n' +
+    '            <div id="chartdiv" style="height: 50vh;"></div>\n' +
     '<h4 id="location"></h4>' +
     '        </div>\n' +
     '        <div class="col-sm-5 card m-3" id="sliders">\n' +
@@ -125,15 +126,15 @@ class Customer {
                 totalCO2Reduction += system.co2Reduction(this.daysOfOperation, this._equivalentFullLoad, this._co2PerKWh);
             }
             resultsString += '<h4>Annual Savings:</h4>' +
-                '<p>Total financial savings is $' +
+                '<p>Total financial savings are $' +
                 this.convertDollar(totalCostSavings) +
-                '<p>Total energy savings is ' +
+                '<p>Total energy savings are ' +
                 totalEnergySavings.toFixed(0) +
                 ' kWh</p><p>Total greenhouse gas reduction is ' +
                 totalCO2Reduction.toFixed(2) +
-                ' tons of CO2</p><h4>10 Year Projections:</h4><p>Total financial savings is $' +
+                ' tons of CO2</p><h4>10 Year Projections:</h4><p>Total financial savings are $' +
                 this.convertDollar(totalCostSavings * this._tenYearCumulative) +
-                '</p><p>Total energy savings is ' +
+                '</p><p>Total energy savings are ' +
                 (totalEnergySavings * 10).toFixed(0) +
                 ' KwH</p><p>Total greenhouse gas reduction is ' +
                 (totalCO2Reduction * 10).toFixed(2) +
@@ -301,11 +302,11 @@ function sendResults(summary) {
                 }
             }
         });
-        $('#sent').text("Results Sent to " + email);
+        $('#sent').text("Results sent to " + email);
         $('#email').hide();
     }
     else {
-        $('#sent').text('Invalid Email');
+        $('#sent').text('There is an issue with your email, please check to make sure it is filled in properly');
     }
 }
 class CoolGreenExcel {
@@ -368,6 +369,7 @@ function printHTML() {
                     "latitude": (Number(obj.Lat) + 0.000001),
                     "longitude": (Number(obj.Lon) + 0.000001),
                     "title": obj.City,
+                    "state": obj.Location,
                     "cdd": Number(obj.CDD),
                     "rate": Number(obj.Rate).toFixed(2)
                 });
@@ -377,7 +379,7 @@ function printHTML() {
             let data = ev.target.dataItem.dataContext;
             Cust.coolingDegreeDays = data.cdd;
             Cust.kWhPrice = data.rate;
-            $("#location").text("Estimations obtained for " + data.title);
+            $("#location").text("Usage estimations obtained for " + data.title + ", " + data.state);
             $("#rate").text(Cust.kWhPrice);
             $("#rateSlider").val(Cust.kWhPrice);
             $("#cdd").text(Cust.coolingDegreeDays);
