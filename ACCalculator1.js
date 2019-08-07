@@ -13,15 +13,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 let startingHTML;
 startingHTML = '<div class="container">\n' +
     '    <div class="row">\n' +
-    '        <div class="col-sm-5" id="map">\n' +
-    '            <div id="chartdiv" style="height: 50vh; width: 80vw"></div>\n' +
-    '<h4 id="location"></h4>' +
+    '        <div class="col-5 card" id="map">\n' +
+    '            <div id="chartdiv" style="height: 30vh"></div>\n' +
     '        </div>\n' +
-    '        <div class="col-sm-5 card m-3" id="sliders">\n' +
+    '        <div class="col-5 card m-3" id="sliders">\n' +
     '        </div>\n' +
     '    </div>\n' +
     ' <p></p>' +
     '        <div class="row" id="systems">\n' +
+    '\n' +
     '            <div class="col-sm-3 m-4" id="addSection">\n' +
     '                <button id="add">add system</button>\n' +
     '            </div>\n' +
@@ -76,7 +76,7 @@ class Customer {
             '</div>');
     }
     addSystem() {
-        this.listOfSystems.push(new System(5, 9, 1, 13));
+        this.listOfSystems.push(new System(0, 0, 0));
         let index = (this.listOfSystems.length - 1);
         this.generateSystem(index);
         $("#age" + index + "Slider").on('input', () => {
@@ -101,14 +101,6 @@ class Customer {
             $("#system" + index).remove();
             Cust.listOfSystems.splice(index, 1);
         });
-        $("#age" + index).text(String(Cust.listOfSystems[index].age));
-        $("#tons" + index).text(String(Cust.listOfSystems[index].tons));
-        $("#seer" + index).text(String(Cust.listOfSystems[index].seer));
-        $("#num" + index).text(String(Cust.listOfSystems[index].num));
-        $("#seer" + index + "Slider").val(Cust.listOfSystems[index].seer);
-        $("#age" + index + "Slider").val(-Cust.listOfSystems[index].age);
-        $("#tons" + index + "Slider").val(Cust.listOfSystems[index].tons);
-        $("#num" + index + "Slider").val(Cust.listOfSystems[index].num);
     }
     convertDollar(value) {
         return (value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
@@ -124,18 +116,17 @@ class Customer {
                 totalEnergySavings += system.kwhYearSaving;
                 totalCO2Reduction += system.co2Reduction(this.daysOfOperation, this._equivalentFullLoad, this._co2PerKWh);
             }
-            resultsString += '<h4>Annual Savings:</h4>' +
-                '<p>Total financial savings is $' +
+            resultsString += '<h4>Results:</h4><p>Total energy savings is ' +
+                totalEnergySavings.toFixed(2) +
+                ' KwH</p><p>Total cost savings is $' +
                 this.convertDollar(totalCostSavings) +
-                '<p>Total energy savings is ' +
-                totalEnergySavings.toFixed(0) +
-                ' kWh</p><p>Total CO2 reduction is ' +
+                '</p><p>Total CO2 reduction is ' +
                 totalCO2Reduction.toFixed(2) +
-                ' tons</p><h4>10 Year Projections:</h4><p>Total cost savings is $' +
+                ' tons</p><h4>10 Year Projections:</h4><p>Total energy savings is ' +
+                (totalEnergySavings * 10).toFixed(2) +
+                ' KwH</p><p>Total cost savings is $' +
                 this.convertDollar(totalCostSavings * this._tenYearCumulative) +
-                '</p><p>Total energy reduction is ' +
-                (totalEnergySavings * 10).toFixed(0) +
-                ' KwH</p><p>Total greenhouse gas reduction is ' +
+                '</p><p>Total CO2 reduction is ' +
                 (totalCO2Reduction * 10).toFixed(2) +
                 ' tons</p>';
             $("#results").html(resultsString);
@@ -323,11 +314,11 @@ class CoolGreenExcel {
         });
     }
 }
-let Cust = new Customer(0, 5, 0);
+let Cust = new Customer(0, 0, 0);
 function generateSlider(tag, label, min, max, step) {
     return '<div class="card-block"> <label for="' + tag + 'Slider">' + label + '<span id="' + tag + '"></span></label> <br> <input id="' + tag + 'Slider" type="range" class="custom-range" min="' + min + '" max="' + max + '" step="' + step + '"> </div>';
 }
-$("#sliders").append(generateSlider('rate', 'Electric Rate (per kWh) - $', 0, 0.5, 0.01), generateSlider('cdd', 'Cooling Degree Days - ', 0, 5000, 10), generateSlider('days', 'Days of AC Operation Per Week - ', 0, 7, 1));
+$("#sliders").append(generateSlider('rate', 'Electric Rate - $', 0, 0.5, 0.01), generateSlider('cdd', 'Cooling Degree Days - ', 0, 5000, 10), generateSlider('days', 'Days of Operation Per Week - ', 0, 7, 1));
 $('#add').click(() => {
     Cust.addSystem();
 });
@@ -369,7 +360,7 @@ function printHTML() {
                     "longitude": (Number(obj.Lon) + 0.000001),
                     "title": obj.City,
                     "cdd": Number(obj.CDD),
-                    "rate": Number(obj.Rate).toFixed(2)
+                    "rate": Number(obj.Rate)
                 });
             }
         });
@@ -377,16 +368,11 @@ function printHTML() {
             let data = ev.target.dataItem.dataContext;
             Cust.coolingDegreeDays = data.cdd;
             Cust.kWhPrice = data.rate;
-            $("#location").text("Estimations obtained for " + data.title);
             $("#rate").text(Cust.kWhPrice);
             $("#rateSlider").val(Cust.kWhPrice);
             $("#cdd").text(Cust.coolingDegreeDays);
             $("#cddSlider").val(Cust.coolingDegreeDays);
-            $("#days").text(String(Cust.daysOfOperation));
-            $("#daysSlider").val(Cust.daysOfOperation);
         });
-        // add zoom control
-        chart.zoomControl = new am4maps.ZoomControl();
     });
 }
 $("#rateSlider").on('input', () => {
