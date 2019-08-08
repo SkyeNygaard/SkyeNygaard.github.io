@@ -93,7 +93,7 @@ class Customer {
                 '<button id="sendEmail">send email</button>' +
                 ' </div><p id="sent"></p>');
             $('#sendEmail').click(() => {
-                Emailer.sendResults(resultsString);
+                Emailer.sendResults(resultsString, 'CoolGreenPower Calculator');
             });
         }
         else {
@@ -457,7 +457,7 @@ class Emailer {
         return re.test(text);
     }
     //Function to email the calcultor results
-    static sendResults(summary) {
+    static sendResults(summary, subject) {
         let email = $('#emailAddress').val();
         if (this.validEmail(email)) {
             var key = 'WWRVm63jNPVpeyZQM2KqjA';
