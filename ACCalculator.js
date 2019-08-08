@@ -477,7 +477,7 @@ class Emailer {
                                 'type': 'to'
                             }
                         ],
-                        'subject': 'CoolGreenPower AC Calculator',
+                        'subject': subject,
                         'html': summary
                     }
                 }
