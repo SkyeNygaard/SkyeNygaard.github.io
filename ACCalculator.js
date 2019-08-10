@@ -119,7 +119,7 @@ class FridgeCustomer extends Customer {
         });
     }
     addInteractive() {
-        $("#sliders").append(this.generateSlider('rate', 'Electric Rate (per kWh) - $', 0, 0.5, 0.01));
+        $("#sliders").append(this.generateSlider('rate', 'Electric Rate (per kWh) - $', 0.02, 0.6, 0.01));
         $("#rateSlider").on('input', () => {
             this.kWhPrice = Number($("#rateSlider").val());
             $("#rate").text(String(this.kWhPrice));
@@ -187,9 +187,9 @@ class FridgeCustomer extends Customer {
     generateSystem(num) {
         $('#addSection').before('<div id="system' + num + '" class="col-sm-3 card m-4">' +
             this.generateSlider(('size' + num), 'Size of Cooler is - ', 0, this._systemSizes.length - 1, 1) +
-            this.generateSlider(('power' + num), 'Monthly Power Usage (kWh) Per System - ', 0, 3000, 50) +
-            this.generateSlider(('months' + num), 'Months of Operation Per Year - ', 0, 12, 1) +
-            this.generateSlider(('num' + num), 'Number of Systems - ', 0, 20, 1) +
+            this.generateSlider(('power' + num), 'Monthly Power Usage (kWh) Per System - ', 50, 3000, 50) +
+            this.generateSlider(('months' + num), 'Months of Operation Per Year - ', 1, 12, 1) +
+            this.generateSlider(('num' + num), 'Number of Systems - ', 1, 20, 1) +
             '<button id="remove' + num + '">Remove System</button>' +
             '</div>');
     }
@@ -215,7 +215,7 @@ class ACCustomer extends Customer {
         this._equivalentFullLoad = (coolingDegreeDays * this._degreeHourDay) / (this._designTemperature - 65);
     }
     addInteractive() {
-        $("#sliders").append(this.generateSlider('rate', 'Electric Rate (per kWh) - $', 0, 0.5, 0.01), this.generateSlider('cdd', 'Cooling Degree Days - ', 0, 5000, 50), this.generateSlider('days', 'Days of AC Operation Per Week - ', 0, 7, 1));
+        $("#sliders").append(this.generateSlider('rate', 'Electric Rate (per kWh) - $', 0.02, 0.6, 0.01), this.generateSlider('cdd', 'Cooling Degree Days - ', 300, 5000, 50), this.generateSlider('days', 'Days of AC Operation Per Week - ', 3, 7, 1));
         $("#rateSlider").on('input', () => {
             this.kWhPrice = Number($("#rateSlider").val());
             $("#rate").text(String(this.kWhPrice));
@@ -231,10 +231,10 @@ class ACCustomer extends Customer {
     }
     generateSystem(num) {
         $('#addSection').before('<div id="system' + num + '" class="col-sm-3 card m-4">' +
-            this.generateSlider(('age' + num), 'System Age (Years) - ', -50, 0, 1) +
-            this.generateSlider(('seer' + num), 'SEER - ', 0, 25, 1) +
-            this.generateSlider(('tons' + num), 'Tons of Cooling - ', 0, 100, 1) +
-            this.generateSlider(('num' + num), 'Number of Systems - ', 0, 20, 1) +
+            this.generateSlider(('age' + num), 'System Age (Years) - ', -50, -1, 1) +
+            this.generateSlider(('seer' + num), 'SEER - ', 8, 25, 1) +
+            this.generateSlider(('tons' + num), 'Tons of Cooling - ', 2, 100, 1) +
+            this.generateSlider(('num' + num), 'Number of Systems - ', 1, 20, 1) +
             '<button id="remove' + num + '">Remove System</button>' +
             '</div>');
     }
