@@ -31,9 +31,9 @@ class Customer {
             '    <div class="row">\n' +
             '        <div class="col-sm-7" id="map">\n' +
             '            <div id="chartdiv" style="height: 35vh;"></div>\n' +
-            '<h4 id="location"></h4>' +
             '        </div>\n' +
-            '        <div class="col-sm-4 card m-3" id="sliders">\n' +
+            '        <div class="col-sm-4 m-3" id="sliders">\n' +
+            '<h5 id="location"></h5>' +
             '        </div>\n' +
             '    </div>\n' +
             ' <p></p>' +
@@ -563,7 +563,7 @@ class CoolGreenDisplay {
                 let data = ev.target.dataItem.dataContext;
                 cust.coolingDegreeDays = data.cdd;
                 cust.kWhPrice = data.rate;
-                $("#location").text("Usage estimations obtained for " + data.title + ", " + data.state);
+                $("#location").text(data.title + ", " + data.state);
                 $("#rate").text(cust.kWhPrice);
                 $("#rateSlider").val(cust.kWhPrice);
                 $("#cdd").text(cust.coolingDegreeDays);
@@ -582,7 +582,7 @@ class CoolGreenDisplay {
             this.imageSeriesTemplate.events.on("hit", function (ev) {
                 let data = ev.target.dataItem.dataContext;
                 cust.kWhPrice = data.rate;
-                $("#location").text("Cost estimations obtained for " + data.title + ", " + data.state);
+                $("#location").text(data.title + ", " + data.state);
                 $("#rate").text(cust.kWhPrice);
                 $("#rateSlider").val(cust.kWhPrice);
             });
