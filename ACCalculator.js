@@ -25,6 +25,12 @@ class Customer {
         }
         this._tenYearCumulative = cumulative;
     }
+    get location() {
+        return this._location;
+    }
+    set location(value) {
+        this._location = value;
+    }
     startingHTML(description) {
         let startingHTML = '<div class="container">\n' +
             '<p>' + description + '</p>' +
@@ -93,7 +99,7 @@ class Customer {
                 '<button id="sendEmail">send email</button>' +
                 ' </div><p id="sent"></p>');
             $('#sendEmail').click(() => {
-                Emailer.sendResults(resultsString, 'CoolGreenPower Calculator');
+                Emailer.sendResults(this.makeHTML(resultsString), 'CoolGreenPower Calculator');
             });
         }
         else {
@@ -199,6 +205,29 @@ class FridgeCustomer extends Customer {
             this.startingHTML('Select a city from the map or insert your own data. Then add systems to estimate your cost savings with COOLNOMIX on your refrigeration system!');
             this.addInteractive();
         });
+    }
+    makeHTML(results) {
+        results += "<p></p><p><h4>Input Data:</h4></p><p>City: "
+            + this.location
+            + "</p><p>Electric Rate: "
+            + this.kWhPrice
+            + "</p><p><h4>Systems: </h4></p>";
+        let systemNum = 1;
+        for (let system of this.listOfSystems) {
+            results += "<p><strong>System "
+                + systemNum
+                + ": </strong></p><p>Size of Cooler is: "
+                + $("#size" + (systemNum - 1)).text()
+                + "</p><p>Monthly Power Usage (kWh) Per System: "
+                + system.power
+                + "</p><p>Months of Operation Per Year: "
+                + system.months
+                + "</p><p>Number of Systems: "
+                + system.num
+                + "</p>";
+            systemNum += 1;
+        }
+        return results;
     }
 }
 // represents the environmental variables that hold across the systems
@@ -309,6 +338,33 @@ class ACCustomer extends Customer {
     initialDisplay() {
         this.startingHTML('Select a city from the map or insert your own data. Then add systems to estimate your cost savings with COOLNOMIX on your air conditioning system!');
         this.addInteractive();
+    }
+    makeHTML(results) {
+        results += "<p></p><p><h4>Input Data:</h4></p><p>City: "
+            + this.location
+            + "</p><p>Electric Rate: "
+            + this.kWhPrice
+            + "</p><p>Cooling Degree Days: "
+            + this.coolingDegreeDays
+            + "</p><p>Days of AC Operation Per Week: "
+            + this.daysOfOperation
+            + "</p><p><h4>Systems: </h4></p>";
+        let systemNum = 1;
+        for (let system of this.listOfSystems) {
+            results += "<p><strong>System "
+                + systemNum
+                + ": </strong></p><p>System Age (Years): "
+                + system.age
+                + "</p><p>SEER: "
+                + system.seer
+                + "</p><p>Tons of Cooling: "
+                + system.tons
+                + "</p><p>Number of Systems: "
+                + system.num
+                + "</p>";
+            systemNum += 1;
+        }
+        return results;
     }
 }
 // Represents a system, either a fridge system or an AC system
@@ -563,7 +619,8 @@ class CoolGreenDisplay {
                 let data = ev.target.dataItem.dataContext;
                 cust.coolingDegreeDays = data.cdd;
                 cust.kWhPrice = data.rate;
-                $("#location").text(data.title + ", " + data.state);
+                cust.location = data.title + ", " + data.state;
+                $("#location").text(cust.location);
                 $("#rate").text(cust.kWhPrice);
                 $("#rateSlider").val(cust.kWhPrice);
                 $("#cdd").text(cust.coolingDegreeDays);
@@ -582,7 +639,8 @@ class CoolGreenDisplay {
             this.imageSeriesTemplate.events.on("hit", function (ev) {
                 let data = ev.target.dataItem.dataContext;
                 cust.kWhPrice = data.rate;
-                $("#location").text(data.title + ", " + data.state);
+                cust.location = data.title + ", " + data.state;
+                $("#location").text(cust.location);
                 $("#rate").text(cust.kWhPrice);
                 $("#rateSlider").val(cust.kWhPrice);
             });
