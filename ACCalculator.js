@@ -555,7 +555,7 @@ class CoolGreenDisplay {
         // Set map definition
         this.chart.geodata = am4geodata_usaLow;
         // Set projection
-        this.chart.projection = new am4maps.projections.Albers();
+        this.chart.projection = new am4maps.projections.AlbersUsa();
         // add zoom control
         this.chart.zoomControl = new am4maps.ZoomControl();
         // Create map polygon series
