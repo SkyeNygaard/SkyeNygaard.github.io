@@ -260,7 +260,7 @@ class ACCustomer extends Customer {
     }
     generateSystem(num) {
         $('#addSection').before('<div id="system' + num + '" class="col-sm-3 card m-4">' +
-            this.generateSlider(('age' + num), 'System Age (Years) - ', -50, -1, 1) +
+            this.generateSlider(('age' + num), 'System Age (Years) - ', 1, 50, 1) +
             this.generateSlider(('seer' + num), 'SEER - ', 8, 25, 1) +
             this.generateSlider(('tons' + num), 'Tons of Cooling - ', 2, 100, 1) +
             this.generateSlider(('num' + num), 'Number of Systems - ', 1, 20, 1) +
@@ -272,7 +272,7 @@ class ACCustomer extends Customer {
         let index = (this.listOfSystems.length - 1);
         this.generateSystem(index);
         $("#age" + index + "Slider").on('input', () => {
-            this.listOfSystems[index].age = -Number($("#age" + index + "Slider").val());
+            this.listOfSystems[index].age = Number($("#age" + index + "Slider").val());
             $("#seer" + index).text(String(this.listOfSystems[index].seer));
             $("#seer" + index + "Slider").val(this.listOfSystems[index].seer);
             $("#age" + index).text(String(this.listOfSystems[index].age));
@@ -298,7 +298,7 @@ class ACCustomer extends Customer {
         $("#seer" + index).text(String(this.listOfSystems[index].seer));
         $("#num" + index).text(String(this.listOfSystems[index].num));
         $("#seer" + index + "Slider").val(this.listOfSystems[index].seer);
-        $("#age" + index + "Slider").val(-this.listOfSystems[index].age);
+        $("#age" + index + "Slider").val(this.listOfSystems[index].age);
         $("#tons" + index + "Slider").val(this.listOfSystems[index].tons);
         $("#num" + index + "Slider").val(this.listOfSystems[index].num);
     }
@@ -555,28 +555,28 @@ class CoolGreenDisplay {
         // Set map definition
         this.chart.geodata = am4geodata_usaLow;
         // Set projection
-        this.chart.projection = new am4maps.projections.Albers();
+        this.chart.projection = new am4maps.projections.Miller();
         // add zoom control
         this.chart.zoomControl = new am4maps.ZoomControl();
         // Create map polygon series
         this.polygonSeries = this.chart.series.push(new am4maps.MapPolygonSeries());
         this.polygonSeries.useGeodata = true;
-        // Configure series
-        this.polygonTemplate = this.polygonSeries.mapPolygons.template;
-        this.polygonTemplate.tooltipText = "{name}";
-        this.polygonTemplate.fill = am4core.color("#9ee0be");
-        // Create image series
-        this.imageSeries = this.chart.series.push(new am4maps.MapImageSeries());
-        // Create a circle image in image series template so it gets replicated to all new images
-        this.imageSeriesTemplate = this.imageSeries.mapImages.template;
-        this.circle = this.imageSeriesTemplate.createChild(am4core.Circle);
-        this.circle.radius = 6;
-        this.circle.fill = am4core.color("#e03e96");
-        this.circle.nonScaling = true;
-        this.circle.tooltipText = "{title}";
-        // Set property fields
-        this.imageSeriesTemplate.propertyFields.latitude = "latitude";
-        this.imageSeriesTemplate.propertyFields.longitude = "longitude";
+            // Configure series
+            this.polygonTemplate = this.polygonSeries.mapPolygons.template;
+            this.polygonTemplate.tooltipText = "{name}";
+            this.polygonTemplate.fill = am4core.color("#9ee0be");
+            // Create image series
+            this.imageSeries = this.chart.series.push(new am4maps.MapImageSeries());
+            // Create a circle image in image series template so it gets replicated to all new images
+            this.imageSeriesTemplate = this.imageSeries.mapImages.template;
+            this.circle = this.imageSeriesTemplate.createChild(am4core.Circle);
+            this.circle.radius = 6;
+            this.circle.fill = am4core.color("#e03e96");
+            this.circle.nonScaling = true;
+            this.circle.tooltipText = "{title}";
+            // Set property fields
+            this.imageSeriesTemplate.propertyFields.latitude = "latitude";
+            this.imageSeriesTemplate.propertyFields.longitude = "longitude";
     }
     static downloadCSV(url) {
         return __awaiter(this, void 0, void 0, function* () {
