@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Configuring X11 Display Server for Windows Subsystem for Linux 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+    		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+			
+    </div>
+
+				<!-- Main -->
+				<article id="main">
+						<h2 style="text-align: center;">Configuring X11 Display Server for Windows-Subsystem-for-Linux-2</h2>
+					<section class="wrapper style5">
+						<div class="inner">
+							
+<p>
+	This guide follows <a href="https://www.how2shout.com/how-to/run-linux-gui-apps-on-windows-10-with-native-bash.html">https://www.how2shout.com/how-to/run-linux-gui-apps-on-windows-10-with-native-bash.html</a>
+</p>
+<p>
+	If you have a Windows Subsystem for Linux 2 (WSL2) install on windows 10, you might someday want to run an app with GUI.
+	If you have WSL 1, which was the standard until the May 2020 update, you can directly follow the guide on <a href="https://www.how2shout.com/how-to/run-linux-gui-apps-on-windows-10-with-native-bash.html">how2shout.com</a>. 
+	However, because of the way version 2 handles networking, some modification of that guide is needed to get everything working.
+	For step 1-5, you the instructions are the same as the guide. Install <a href="https://sourceforge.net/projects/vcxsrv/files/latest/download">VcXsrv</a>, and launch it.
+</p>
+
+<h3>
+	Step 6 Alternative: Open XLaunch
+</h3>
+<p>
+	When you open XLaunch, you need to check <strong>disable access control </strong>on extra settings. Otherwise the instructions are the same as the other guide. 
+	Step 7 can also be followed, saving it for running later. I personally save the conf file to my desktop, for easy future launches.
+</p>
+<img src="images/Xsrv.png" alt="">
+
+<h3>
+	Step 8 Alternative: Display Server Constants in Bash
+</h3>
+<p>
+	In order to get WSL2 to connect to the running display server on windows, it needs to know how to connect. The following command can be run manually each time you want to run a GUI application, or alternatively you can add it to the end of your ~/.bashrc or ~/.zshrc to have it automatically run when wsl2 starts up.
+	<p style="font-family: monospace;">export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0</p>
+	After this restart WSL2, and everything should work. You can test it by running gedit or any other gui application.
+</p>
+
+						</div>
+
+                                    
+</section>
+</div>
+</section>
+</article>
+		
+			</div>
+
+	</body>
+</html>
