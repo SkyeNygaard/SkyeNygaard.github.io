@@ -2,6 +2,7 @@
 *apartment*.com
 *ebay.*
 *facebook.com/marketplace
+*levels.fyi
 *pad*.com
 *realtor.com
 *redfin.com
