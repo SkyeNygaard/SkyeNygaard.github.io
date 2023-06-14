@@ -186,7 +186,7 @@ hypebeast.com
 ieee.org
 ign.com
 ikea.com
-imdb.com
+*imdb.com
 instacart.com
 iottechnews.com
 ironman.com
