@@ -7,6 +7,6 @@ reddit.com/r/neu
 reddit.com/r/notion
 reddit.com/r/obsidian
 reddit.com/r/steam_deck
-youtube.com/feed/trending
-youtube.com/results
-youtube.com/shorts
+*youtube.com/feed/trending
+*youtube.com/results
+*youtube.com/shorts
