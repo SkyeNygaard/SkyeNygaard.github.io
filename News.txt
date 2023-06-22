@@ -96,6 +96,7 @@ deadline.com
 debugpoint.com
 deccanchronicle.com
 deccanherald.com
+decrypt.co
 denverpost.com
 dev.to
 devops.com
@@ -163,6 +164,7 @@ howstuffworks.com
 huffpost.com
 ign.com
 imf.org
+improvethenews.org
 inc.com
 independent.co.uk
 indianexpress.com
