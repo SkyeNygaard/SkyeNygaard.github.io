@@ -5,7 +5,6 @@
 *yahoo.com
 +google.com/calendar
 +google.com/maps/d/
-+google.com/travel
 +yahoo.com/*+
 ask.com
 baidu.com
