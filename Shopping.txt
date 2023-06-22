@@ -1,5 +1,6 @@
 *amazon.*
 *apartment*.com
+*craigslist.org
 *ebay.*
 *facebook.com/marketplace
 *levels.fyi
@@ -96,7 +97,6 @@ coolcamping.com
 costco.com
 couponcabin.com
 cpu-monkey.com
-craigslist.org
 crateandbarrel.com
 crocs.com
 cyberpowerpc.com
