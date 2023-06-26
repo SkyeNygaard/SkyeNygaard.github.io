@@ -3,6 +3,7 @@
 *craigslist.org
 *ebay.*
 *facebook.com/marketplace
+*imdb.com
 *levels.fyi
 *pad*.com
 *realtor.com
@@ -57,8 +58,17 @@ bestbuy.com
 besthike.com/
 bevmo.com
 bhphotovideo.com
+bicyclesonline.com.au
+bike24.com
+bikeexchange.com
+bikeinn.com
 bikemag.com
 bikepacking.com
+bikeradar.com
+bikes.com.au
+bikesdirect.com
+biketart.com
+biketiresdirect.com
 bikingbis.com
 billboard.com
 birkenstock.com
@@ -67,22 +77,29 @@ biztechmagazine.com
 blackdiamondequipment.com
 blog.hubspot.com
 bloomingdales.com
+bmc-switzerland.com
 boardgamegeek.com
 boohoo.com
 bradsdeals.com
+brompton.com
 buildabear.com
 bushwalk.com/forum/
 californiathroughmylens.com
 caltopo.com/
+cambriabike.com
 campendium.com
 campingworld.com
+canyon.com
+canyonbikes.com
 caviar.com
 cdbaby.com
 cdkeys.com
+chainreactioncycles.com
 champsports.com
 chewy.com
 chrome.google.com
 cinemark.com
+citybikesonline.com
 cleverhiker.com
 climberism.com
 climbersagainstcancer.org
@@ -90,6 +107,7 @@ climbing.com
 climbtogether.com
 cnet.com
 coastal.com
+competitivecyclist.com
 complex.com
 consequenceofsound.net
 converse.com
@@ -100,6 +118,7 @@ cpu-monkey.com
 crateandbarrel.com
 crocs.com
 cyberpowerpc.com
+cyclesurgery.com
 cycletraveller.com.au
 cycleworld.com
 datpiff.com
@@ -109,6 +128,7 @@ deccanherald.com
 delivery.com
 dell.com
 dhgate.com
+diamondback.com
 dickssportinggoods.com
 digit.in
 digitaltrends.com
@@ -124,6 +144,7 @@ ebay.com
 ediblearrangements.com
 engadget.com
 etsy.com
+evanscycles.com
 expeditioneducationblog.com
 expertvagabond.com
 extremetech.com
@@ -156,6 +177,7 @@ gearpatrol.com
 geekwire.com
 genius.com
 getaround.com
+giant-bicycles.com
 gilt.com
 gizmodo.com
 glassesusa.com
@@ -189,7 +211,6 @@ hypebeast.com
 ieee.org
 ign.com
 ikea.com
-*imdb.com
 instacart.com
 iottechnews.com
 ironman.com
@@ -204,7 +225,9 @@ itsecurityguru.org
 itwire.com
 itworldcanada.com
 jameskaiser.com
+jbi.bike
 jcpenneyoptical.com
+jensonusa.com
 jetboil.com
 jimmyjazz.com
 joann.com
@@ -234,6 +257,7 @@ mapswithnoroads.com
 marathonguide.com
 marksandspencer.com
 mashable.com
+merlincycles.com
 merrell.com
 metacritic.com
 michaels.com
@@ -248,6 +272,7 @@ mountainproject.com
 movietickets.com
 msrgear.com
 myanimelist.net
+nashbar.com
 nation.com
 nationalgeographic.com
 necessaryclothing.com
@@ -266,6 +291,7 @@ nytimes.com
 ocado.com
 omahasteaks.com
 openspacetrust.org
+orbea.com
 origin.com
 ospreypacks.com
 ourbigescape.com
@@ -283,10 +309,13 @@ patagonia.com
 pcgamer.com
 pcworld.com
 pcworld.idg.com.au
+performancebike.com
 petco.com
 phonearena.com
+pinarello.com
 pitchfork.com
 planettechnews.com
+planetx.co.uk
 pmags.com
 pocket-lint.com
 postmates.com
@@ -297,8 +326,12 @@ priceline.com
 producthunt.com
 protondb.com
 puma.com
+purecycles.com
 qvc.com
+racycles.com
+radpowerbikes.com
 rakuten.com
+raleighusa.com
 ray-ban.com
 recreation.gov
 redbubble.com
@@ -335,6 +368,7 @@ shopbop.com
 shopdisney.com
 shophq.com
 shopzilla.com
+sigma-bikes.de
 siliconcanals.nl
 siliconrepublic.com
 slashdot.org
@@ -349,6 +383,7 @@ snowshoemag.com
 soap.com
 society6.com
 solecollector.com
+specialized.com
 spin.com
 staples.*
 steamcommunity.com
@@ -440,6 +475,7 @@ trails.com
 travellemming.com
 travelpulse.com
 treelinereview.com
+trek.com
 trulia.com
 trustedreviews.com
 tuftandneedle.com
@@ -453,6 +489,7 @@ underarmour.com
 uniqlo.com
 urbanoutfitters.com
 vans.com
+velo-orange.com
 venturebeat.com
 ventureburn.com
 verber.com/outdoor-gear
@@ -469,6 +506,7 @@ wayfair.de
 westcoastwayfarers.com
 westelm.com
 wherearethosemorgans.com
+wiggle.com
 wildernesstravel.com
 wildlandtrekking.com
 williams-sonoma.com
