@@ -34,6 +34,7 @@ analyticsinsight.net
 anandtech.com
 androidauthority.com
 androidcentral.com
+sfist.com
 androidpolice.com
 apnews.com
 arstechnica.com
