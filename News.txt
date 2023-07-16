@@ -17,6 +17,7 @@ abc.net.au
 abc10.com
 bizjournals.com
 abc13.com
+kongregate.com
 abc7news.com
 abcnews.go.com
 accuweather.com
