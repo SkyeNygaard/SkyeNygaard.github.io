@@ -84,6 +84,7 @@ railcity.co
 railroadsafrica.org
 railjournal.hu
 raillynews.ru
+kongregate.com
 railukblog.com
 transreporter.com/railways
 railcan.ca
@@ -154,6 +155,7 @@ railjournal.sk
 raillynews.am
 railuk.info/gallery
 transreporter.com/railways-features
+kongregate.com
 railcanadian.org
 railengineer.us/es
 railpictures.us
@@ -229,6 +231,7 @@ canoe.com
 cbpp.org
 cbslocal.com
 cbsnews.com
+kongregate.com
 cgtn.com
 chasingthedonkey.com
 chicagotribune.com
