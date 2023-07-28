@@ -21,6 +21,8 @@ abc13.com
 railway-technology.com
 crazymonkeygames.com
 economictimes.indiatimes.com
+globalmasstransit.net
+reason.com
 railjournal.com
 railuk.com
 railnews.co.uk
@@ -45,6 +47,7 @@ raillynews.com
 railtrades.com
 railvolution.net
 rail.co
+zocalopublicsquare.org
 railjournal.ru
 railnews.de
 trainbusiness.com
