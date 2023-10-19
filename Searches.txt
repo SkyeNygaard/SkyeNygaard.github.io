@@ -3,6 +3,7 @@
 *ecosia.org
 *qwant.com
 *yahoo.com
+*.*/blog*
 +google.com/calendar
 +google.com/maps/d/
 +yahoo.com/*+
