@@ -6,7 +6,6 @@
 *.*/*q=*news*
 *.*/*tbm=nws*
 *.*/*tbm=vid*
-*.*/blog*
 *.*/magazine*
 *aljazeera.com
 *medium.com
