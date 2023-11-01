@@ -34,3 +34,14 @@ www.linkedin.com/mynetwork/
 yandex.com
 yandex.ru
 you.com
+
+*.*/*p=*current*event*
+*.*/*p=*headlines*
+*.*/*p=*news*
+*.*/*q=*current*event*
+*.*/*q=*headlines*
+*.*/*q=*news*
+*.*/*tbm=nws*
+*.*/*tbm=vid*
+*.*/magazine*
+*medium.com
