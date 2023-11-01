@@ -1,14 +1,4 @@
-*.*/*p=*current*event*
-*.*/*p=*headlines*
-*.*/*p=*news*
-*.*/*q=*current*event*
-*.*/*q=*headlines*
-*.*/*q=*news*
-*.*/*tbm=nws*
-*.*/*tbm=vid*
-*.*/magazine*
 *aljazeera.com
-*medium.com
 9to5google.com
 9to5linux.com
 9to5mac.com
