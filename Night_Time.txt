@@ -1,3 +1,5 @@
 *
 +notion.so
 +docs.google.com
++spotify.com
++usajobs.gov
