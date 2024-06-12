@@ -12,4 +12,5 @@ chess.com
 google.com
 instagram.com
 linkedin.com
+konkr.io
 tiktok.com
