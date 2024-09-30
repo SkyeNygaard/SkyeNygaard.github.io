@@ -6,6 +6,7 @@
 +*google.com/*+
 +*linkedin.com/*+
 +*reddit.com/*+
+x.com/home
 +*twitter.com/*+
 +*youtube.com/*+
 chess.com
