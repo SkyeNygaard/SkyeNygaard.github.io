@@ -33,8 +33,6 @@ wolframalpha.com
 www.linkedin.com/mynetwork/
 yandex.com
 yandex.ru
-you.com
-
 *.*/*p=*current*event*
 *.*/*p=*headlines*
 *.*/*p=*news*
