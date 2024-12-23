@@ -4,10 +4,6 @@
 bloomberg.com
 strongtowns.orgs
 smartcitiesdive.com
-masstransitmag.com
 theurbanist.org
 railwayage.com
-washingtoncitypaper.com
-washingtontimes.com
-wamu.org
-ggwash.org
+
