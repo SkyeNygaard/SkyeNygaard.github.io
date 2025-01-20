@@ -11,7 +11,7 @@ x.com/home
 +*youtube.com/*+
 chess.com
 google.com
-instagram.com
-linkedin.com
 konkr.io
-tiktok.com
++tiktok.com
++instagram.com
++linkedin.com
