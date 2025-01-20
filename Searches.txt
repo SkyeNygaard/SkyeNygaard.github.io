@@ -21,7 +21,6 @@ lycos.com
 medium.com
 neeva.com
 quora.com
-reddit.com
 search.aol.com
 search.yahoo.com
 searchencrypt.com
@@ -30,7 +29,8 @@ teamblind.com
 teoma.com
 twitter.com
 wolframalpha.com
-www.linkedin.com/mynetwork/
++reddit.com
++www.linkedin.com/mynetwork/
 yandex.com
 yandex.ru
 *.*/*p=*current*event*
