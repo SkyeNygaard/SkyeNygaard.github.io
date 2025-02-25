@@ -14,7 +14,7 @@ duck.com
 en.wikipedia.org
 excite.com
 gibiru.com
-+google.com
+google.com
 hakia.com
 ixquick.com
 lycos.com
