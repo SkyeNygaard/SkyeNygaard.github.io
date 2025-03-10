@@ -8,9 +8,9 @@
 *pad*.com
 *realtor.com
 *redfin.com
-*rent*.com
-*shop.*.*
-*shop.*.com
++*rent*.com
++*shop.*.*
++*shop.*.com
 *zillow.com
 +amazon.com/photos
 1800contacts.com
