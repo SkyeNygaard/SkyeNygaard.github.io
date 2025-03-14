@@ -1,4 +1,4 @@
-linkedin.com/feed
++linkedin.com/feed
 reddit.com/r/gnome
 reddit.com/r/kde
 reddit.com/r/linux
