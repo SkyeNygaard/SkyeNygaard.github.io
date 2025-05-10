@@ -6,4 +6,4 @@ strongtowns.orgs
 smartcitiesdive.com
 theurbanist.org
 railwayage.com
-
+reddit.com/r/singularity
