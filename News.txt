@@ -10,6 +10,7 @@ natesilver.net
 9to5mac.com
 abc.net.au
 sf.streetsblog.org
+nyc.streetsblog.org
 calmatters.org
 sfyimby.com
 abc10.com
