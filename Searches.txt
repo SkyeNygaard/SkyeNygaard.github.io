@@ -31,6 +31,7 @@ twitter.com
 x.com
 wolframalpha.com
 reddit.com
++reddit.com/r/singularity
 +www.linkedin.com/mynetwork/
 yandex.com
 yandex.ru
