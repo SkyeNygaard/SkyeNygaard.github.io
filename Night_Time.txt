@@ -6,3 +6,4 @@
 +northeastern-my.sharepoint.com
 +drive.google.com
 +open.spotify.com
++music.youtube.com
