@@ -2,6 +2,7 @@
 *reddit.com
 *twitter.com
 *youtube.com
++music.youtube.com
 +*facebook.com/*+
 +*google.com/*+
 +*linkedin.com/*+
