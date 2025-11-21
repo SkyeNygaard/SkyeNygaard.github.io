@@ -12,6 +12,9 @@
 +*shop.*.*
 +*shop.*.com
 *zillow.com
+streeteasy.com
+bsky.app
+polymarket.com
 +amazon.com/photos
 1800contacts.com
 metaculus.com
