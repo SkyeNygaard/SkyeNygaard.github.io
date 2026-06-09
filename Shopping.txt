@@ -13,6 +13,7 @@
 +*shop.*.com
 *zillow.com
 streeteasy.com
+kalshi.com
 bsky.app
 polymarket.com
 +amazon.com/photos
