@@ -1,5 +1,5 @@
 *amazon.*
-+aws.amazon.com
++*aws.amazon.com
 *apartment*.com
 *craigslist.org
 *ebay.*
